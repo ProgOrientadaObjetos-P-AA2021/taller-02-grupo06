@@ -13,7 +13,35 @@ import java.io.Serializable;
  */
 public class PasajeMenorEdad extends PasajeInterCantonal 
         implements Serializable{
+    private double descuento;
+    private double valorPasaje;
     
+    public PasajeMenorEdad(double d){
+        descuento = d;
+    }
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(double d) {
+        descuento = d;
+    }
+
+    @Override
+    public void calcularValorPasaje(){
+        valorPasaje = (numeroKmDistancia * 0.10) + (tarifaBase - (tarifaBase * 
+                (descuento / 100)));
+    }
+        
+    public double getValorPasaje() {
+        return valorPasaje;
+    }
+
+    @Override
+    public void establecerValorPasaje() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
