@@ -11,37 +11,38 @@ import java.io.Serializable;
  *
  * @author reroes
  */
-public class PasajeMenorEdad extends PasajeInterCantonal 
-        implements Serializable{
+public class PasajeMenorEdad extends PasajeInterCantonal
+        implements Serializable {
+
     private double descuento;
-    private double valorPasaje;
-    
-    public PasajeMenorEdad(double d){
-        descuento = d;
+
+    public PasajeMenorEdad(String nombre, String ced, String dest,
+            double km, double tarB, double des) {
+        super(nombre, ced, dest, km, tarB);
+        descuento = des;
+        establecerValorPasaje();
     }
 
-    public double getDescuento() {
+    public double obtenerDescuento() {
         return descuento;
     }
 
-    public void setDescuento(double d) {
+    public void establecerDescuento(double d) {
         descuento = d;
-    }
-
-    @Override
-    public void establecerValorPasaje(){
-        valorPasaje = (numeroKm * 0.10) + (tarifaBase - (tarifaBase * 
-                (descuento / 100)));
-    }
-        
-    public double getValorPasaje() {
-        return valorPasaje;
     }
 
     @Override
     public void establecerValorPasaje() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        valorPasaje = (numeroKm * 0.10) + (tarifaBase - (tarifaBase
+                * (descuento / 100)));
     }
-    
-    
+
+    @Override
+    public String toString () {
+        String cadena = String.format("%s- Porcentaje descuento: %.2f%%\n"
+                + "- Valor pasaje: $%.2f\n", super.toString(),
+                obtenerDescuento(), obtenerValorPasaje());
+        return cadena;
+    }
+
 }
