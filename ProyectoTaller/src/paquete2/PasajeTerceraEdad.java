@@ -24,8 +24,6 @@ public class PasajeTerceraEdad extends PasajeInterCantonal {
     public double getValorPasaje() {
         return valorPasaje;
     }
-
-    
     
     @Override
     public void calcularValorPasaje() {
