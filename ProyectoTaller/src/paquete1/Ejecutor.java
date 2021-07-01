@@ -22,11 +22,11 @@ public class Ejecutor {
         PasajeNormal p2 = new PasajeNormal("Angel Mogrovejo", "7896855123",
                 "Algelia", 5, 1.5, 4);
         
-        PasajeMenorEdad p3 = new PasajeMenorEdad();
+        //PasajeMenorEdad p3 = new PasajeMenorEdad();
 
         pasajes.add(p1);
         pasajes.add(p2);
-        pasajes.add(p3);
+        //pasajes.add(p3);
 
         EscrituraArchivoSecuencial archivo = new EscrituraArchivoSecuencial(
                 nombreArchivo);
