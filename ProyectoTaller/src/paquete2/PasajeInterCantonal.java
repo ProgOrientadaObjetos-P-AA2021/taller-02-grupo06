@@ -13,11 +13,17 @@ import java.io.Serializable;
  */
 public abstract class PasajeInterCantonal implements Serializable{
     
-    public abstract void valorPasaje();
+    protected double valorPasaje;
+    
+    public abstract void establecerValorPasaje();
+    
+    public double obtenerValorPasaje(){
+        return valorPasaje;
+    }
     
     @Override
     public String toString(){
-        return String.format("Pasaje.");
+        return String.format(" - Pasaje: %.2f", obtenerValorPasaje());
     }
     
     
