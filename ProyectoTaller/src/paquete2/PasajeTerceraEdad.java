@@ -13,25 +13,29 @@ import java.io.Serializable;
  */
 public class PasajeTerceraEdad extends PasajeInterCantonal {
     
-    private double valorPasaje;
-    
-    public PasajeTerceraEdad(String n, int c, String o, String d, double nKD, 
-            double tB){
-        super(n, c, o, d, nKD, tB);
-
+    public PasajeTerceraEdad(String nombre, String ced, String dest,
+            double km, double tarB) {
+        super(nombre, ced, dest, km, tarB);
+        establecerValorPasaje();
     }
+<<<<<<< HEAD
 
     public double getValorPasaje() {
         return valorPasaje;
     }
+=======
+>>>>>>> bc45ec9d47428d37f8c025c79929de640628b438
     
     @Override
-    public void calcularValorPasaje() {
-        valorPasaje = (numeroKmDistancia * 0.5) + (tarifaBase / 2);
-    }
-
-    @Override
     public void establecerValorPasaje() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        valorPasaje = (numeroKm * 0.5) + (tarifaBase / 2);
     }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("%s- Valor pasaje: $%.2f\n",
+                super.toString(), obtenerValorPasaje());
+        return cadena;
+    }
+    
 }
