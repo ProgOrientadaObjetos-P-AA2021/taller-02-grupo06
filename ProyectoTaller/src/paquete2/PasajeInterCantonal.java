@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public abstract class PasajeInterCantonal implements Serializable{
     
-    
+    public abstract void valorPasaje();
     
     @Override
     public String toString(){

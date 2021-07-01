@@ -15,4 +15,5 @@ public class PasajeNormal extends PasajeInterCantonal
         implements Serializable{
     
     
+    
 }
