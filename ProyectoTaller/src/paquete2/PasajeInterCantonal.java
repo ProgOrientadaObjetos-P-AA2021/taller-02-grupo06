@@ -15,6 +15,10 @@ public abstract class PasajeInterCantonal implements Serializable{
     
     protected double valorPasaje;
     
+    public PasajeInterCantonal(double val){
+        valorPasaje = val;
+    }
+    
     public abstract void establecerValorPasaje();
     
     public double obtenerValorPasaje(){
