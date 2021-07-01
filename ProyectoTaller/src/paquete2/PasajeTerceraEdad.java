@@ -18,13 +18,10 @@ public class PasajeTerceraEdad extends PasajeInterCantonal {
         super(nombre, ced, dest, km, tarB);
         establecerValorPasaje();
     }
-<<<<<<< HEAD
 
     public double getValorPasaje() {
         return valorPasaje;
     }
-=======
->>>>>>> bc45ec9d47428d37f8c025c79929de640628b438
     
     @Override
     public void establecerValorPasaje() {
