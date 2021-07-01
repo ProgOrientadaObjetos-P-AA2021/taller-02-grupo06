@@ -14,6 +14,20 @@ import java.io.Serializable;
 public class PasajeNormal extends PasajeInterCantonal 
         implements Serializable{
     
+    private double porcentajeAdicional;
     
+    public PasajeNormal(double val, double por){
+        super(val);
+        porcentajeAdicional = por;
+    }
+    
+    public void establecerPorcentajeAdicional(double p){
+        porcentajeAdicional = p;
+    }
+    
+    @Override
+    public void establecerValorPasaje(){
+        
+    }
     
 }
